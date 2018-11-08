@@ -1,10 +1,26 @@
-# Elixir Girls Website and Event Guides
+# ElixirGirls
 
-## Local setup
+To start your Phoenix server:
 
-```
-$ git clone git@github.com:Elixir-Girls/elixir-girls.github.io.git
-$ cd elixir-girls.github.io
-$ bundle install
-$ bundle exec middleman server
-```
+  * Install dependencies with `mix deps.get`
+  * Create and migrate your database with `mix ecto.setup`
+  * Install Node.js dependencies with `cd assets && npm install`
+  * Start Phoenix endpoint with `mix phx.server`
+
+Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+
+Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+
+# TO-DO
+
+* Add `prism.js` for syntax highlighting.
+* Possibly use `bulma` for CSS styling instead of Bootstrap.
+
+
+## Learn more
+
+  * Official website: http://www.phoenixframework.org/
+  * Guides: https://hexdocs.pm/phoenix/overview.html
+  * Docs: https://hexdocs.pm/phoenix
+  * Mailing list: http://groups.google.com/group/phoenix-talk
+  * Source: https://github.com/phoenixframework/phoenix
