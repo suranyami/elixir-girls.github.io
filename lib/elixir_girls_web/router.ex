@@ -17,6 +17,8 @@ defmodule ElixirGirlsWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/guide", GuideController, :index
+    get "/guide/channels", GuideController, :channels
   end
 
   # Other scopes may use custom stacks.

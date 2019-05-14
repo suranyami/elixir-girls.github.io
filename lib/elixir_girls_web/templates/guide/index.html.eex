@@ -1,0 +1,30 @@
+<h1>Listing Guides</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Title</th>
+      <th>Content</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for guide <- @guides do %>
+    <tr>
+      <td><%= guide.name %></td>
+      <td><%= guide.title %></td>
+      <td><%= guide.content %></td>
+
+      <td>
+        <%= link "Show", to: Routes.guide_path(@conn, :show, guide) %>
+        <%= link "Edit", to: Routes.guide_path(@conn, :edit, guide) %>
+        <%= link "Delete", to: Routes.guide_path(@conn, :delete, guide), method: :delete, data: [confirm: "Are you sure?"] %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Guide", to: Routes.guide_path(@conn, :new) %></span>
